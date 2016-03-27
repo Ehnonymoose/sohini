@@ -22,29 +22,16 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}} nav-closed">
-    <header class="sidebar">
-        <div class="sidebar-inner">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img class="img-circle" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-
-            {{navigation}}
-
-            <div class="sidebar-footer">
-                <p>&copy; 2016. All rights reserved.</p>
-            </div>
-        </div>
-    </header>
+    {{navigation}}
 
     <div class="site-wrapper">
         {{! Everything else gets inserted here }}
         {{{body}}}
     </div>
 
-    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 

@@ -1,13 +1,29 @@
-<div class="nav-links">
-    <ul>
-    {{#foreach navigation}}
-        <li>
-            <a class="menu-button" href="{{url absolute="true"}}">{{label}}</a>
-        </li>
-    {{/foreach}}
+<header class="sidebar">
+    <div class="sidebar-inner">
+        <div class="sidebar-header">
+            {{#if @blog.logo}}
+                <a href="{{@blog.url}}" class="site-logo"><img class="img-circle" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+            {{/if}}
 
-        <li>
-            <a class="icon-feed menu-button" href="{{@blog.url}}/rss/">Subscribe</a>
-        </li>
-    </ul>
-</div>
+            <a class="menu-button icon-menu" id="menu-button">Menu</a>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                {{#foreach navigation}}
+                <li>
+                    <a href="{{url absolute="true"}}">{{label}}</a>
+                </li>
+                {{/foreach}}
+
+                <li>
+                    <a class="icon-feed" href="{{@blog.url}}/rss/"> Subscribe</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <p>&copy; 2016. All rights reserved.</p>
+        </div>
+    </div>
+</header>

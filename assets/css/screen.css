@@ -485,189 +485,9 @@ margin on the iframe, cause it breaks stuff. */
             transition: transform 0.5s ease;
 }
 
-body.nav-opened .site-wrapper {
-    overflow-x: hidden;
-    -webkit-transform: translate3D(-240px, 0, 0);
-        -ms-transform: translate3D(-240px, 0, 0);
-            transform: translate3D(-240px, 0, 0);
-    -webkit-transition: -webkit-transform 0.3s ease;
-            transition: transform 0.3s ease;
-}
-
-
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
-
-.main-nav {
-    position: relative;
-    padding: 35px 40px;
-    margin: 0 0 30px 0;
-}
-
-.main-nav a {
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* Navigation */
-body.nav-opened .nav-cover {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 240px;
-    bottom: 0;
-    z-index: 200;
-}
-
-.nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 5;
-    width: 240px;
-    opacity: 0;
-    background: #111;
-    margin-bottom: 0;
-    text-align: left;
-    overflow-y: auto;
-    -webkit-transition: -webkit-transform 0.5s ease,
-                        opacity 0.3s ease 0.7s;
-            transition: transform 0.5s ease,
-                        opacity 0.3s ease 0.7s;
-}
-
-body.nav-closed .nav {
-    -webkit-transform: translate3D(97px, 0, 0);
-        -ms-transform: translate3D(97px, 0, 0);
-            transform: translate3D(97px, 0, 0);
-}
-
-body.nav-opened .nav {
-    opacity: 1;
-    -webkit-transition: -webkit-transform 0.3s ease,
-                        opacity 0s ease 0s;
-            transition: transform 0.3s ease,
-                        opacity 0s ease 0s;
-    -webkit-transform: translate3D(0, 0, 0);
-        -ms-transform: translate3D(0, 0, 0);
-            transform: translate3D(0, 0, 0);
-}
-
-.nav-title {
-    position: absolute;
-    top: 45px;
-    left: 30px;
-    font-size: 16px;
-    font-weight: 100;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.nav-close {
-    position: absolute;
-    top: 38px;
-    right: 25px;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    font-size: 10px;
-}
-
-.nav-close:focus {
-    outline: 0;
-}
-
-.nav-close:before,
-.nav-close:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 20px;
-    height: 1px;
-    background: rgb(150,150,150);
-    top: 15px;
-    -webkit-transition: background 0.15s ease;
-            transition: background 0.15s ease;
-}
-
-.nav-close:before {
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-}
-
-.nav-close:after {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-}
-
-.nav-close:hover:before,
-.nav-close:hover:after {
-    background: rgb(255,255,255);
-}
-
-.nav ul {
-    padding: 90px 9% 5%;
-    list-style: none;
-    counter-reset: item;
-}
-
-.nav li:before {
-    display: block;
-    float: right;
-    padding-right: 4%;
-    padding-left: 5px;
-    text-align: right;
-    font-size: 1.2rem;
-    vertical-align: bottom;
-    color: #B8B8B8;
-    content: counter(item, lower-roman);
-    counter-increment: item;
-}
-.nav li {
-    margin: 0;
-}
-.nav li a {
-    text-decoration: none;
-    line-height: 1.4;
-    font-size: 1.4rem;
-    display: block;
-    padding: 0.6rem 4%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.nav li a:after {
-    display: inline-block;
-    content: " .......................................................";
-    color: rgba(255,255,255,0.2);
-    margin-left: 5px;
-}
-.nav .nav-current:before {
-    color: #fff;
-}
-.nav .nav-current a:after {
-    content: " ";
-    border-bottom: rgba(255,255,255,0.5) 1px solid;
-    width: 100%;
-    height: 1px;
-}
-
-.nav a:link,
-.nav a:visited {
-    color: #B8B8B8;
-}
-
-.nav li.nav-current a,
-.nav a:hover,
-.nav a:active,
-.nav a:focus {
-    color: #fff;
-}
-
 .subscribe-button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -815,23 +635,6 @@ body.nav-opened .nav {
 .nav-closed .no-cover .menu-button:hover {
     border-color: #555;
     color: #555;
-}
-
-/* When the navigation is opened */
-.nav-opened .menu-button {
-    padding: 0 12px;
-    background: #111;
-    border-color: #111;
-    color: #fff;
-    -webkit-transform: translate3D(94px, 0, 0);
-        -ms-transform: translate3D(94px, 0, 0);
-            transform: translate3D(94px, 0, 0);
-    transition: all 0.3s ease;
-}
-
-.nav-opened .menu-button .word {
-    opacity: 0;
-    transition: all 0.3s ease;
 }
 
 /* Special styles when overlaid on an image*/
@@ -1026,24 +829,22 @@ body:not(.post-template) .post-title {
     color: #fff;
 }
 
-.nav-links ul {
-    padding-left: 0;
-    margin-bottom: 20px;
+.nav-links a {
+    text-decoration: none;
+    font-variant: small-caps;
+    min-width: 120px;
+    color: #ddd;
+}
+
+.sidebar-header {
     text-align: center;
 }
 
-.nav-links li {
-    display: inline-block;
-    margin: 0;
+.sidebar-header .img-circle {
+    border-radius: 50%;
 }
 
-.nav-links a {
-    text-decoration: none;
-    box-sizing: border-box;
-    min-width: 120px;
-}
-
-@media (min-width: 1000px) {
+@media (min-width: 901px) {
     .sidebar {
         position: fixed;
         top: 0;
@@ -1061,13 +862,15 @@ body:not(.post-template) .post-title {
         padding: 40px 40px 0 40px;
     }
 
-    .sidebar-inner a.blog-logo {
+    .sidebar-inner a.site-logo {
         width: 100%;
         padding-bottom: 5rem;
+
+        display: block;
+        float: left;
     }
 
     .sidebar-inner .img-circle {
-        border-radius: 50%;
         height: 9rem;
         margin-left: auto;
         margin-right: auto;
@@ -1081,10 +884,126 @@ body:not(.post-template) .post-title {
         font-size: 60%;
         font-style: italic;
     }
+
+    .nav-links li {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .nav-links ul {
+        padding-left: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .site-wrapper {
+        margin-left: 24rem;
+    }
+
+    .sidebar a.icon-menu {
+        display: none;
+    }
+
+    .nav-links a {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        float: right;
+        height: 38px;
+        padding: 0 15px;
+        border-style: solid;
+        border-width: 1px;
+        opacity: 1;
+        text-align: center;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 35px;
+        white-space: nowrap;
+        border-radius: 3px;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links a:before {
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 6px;
+        position: relative;
+        top: 1px;
+    }
+
+    .nav-links a:hover {
+        background: #fff;
+        color: #101010;
+    }
+
+    .nav-links a:focus {
+        outline: 0;
+    }
 }
 
-.site-wrapper {
-    margin-left: 24rem;
+@media (max-width: 900px) {
+    .nav-closed .nav-links {
+        max-height: 0px;
+    }
+
+    .nav-opened .nav-links {
+        max-height: 800px;
+    }
+
+    .nav-opened .sidebar-inner {
+        padding-bottom: 8px;
+    }
+
+    .sidebar-inner {
+        transition: padding-bottom 0.1s linear;
+    }
+
+    .nav-links {
+        background-color: #333;
+        overflow: hidden;
+
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links ul {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .nav-links a {
+        padding: 18px 25px;
+        line-height: 12px;
+        display: block;
+    }
+
+    .nav-links li {
+        display: inline;
+    }
+
+    .nav-links a:hover {
+        background-color: #666;
+    }
+
+    .sidebar-header {
+        padding-top: 8px;
+        width: 100%;
+    }
+
+    .sidebar-header .img-circle {
+        height: 40px;
+        padding: 0;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .sidebar-header #menu-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
 }
 
 
